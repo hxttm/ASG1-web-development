@@ -1,0 +1,86 @@
+/* Body background - soft neutral for professional look */
+body {
+    background-color: #fdf6f0; 
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar styling */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; 
+    z-index: 1000;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #e65c00;
+}
+
+/* Main container in horizontal row */
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 20px;
+    scroll-behavior: smooth;
+}
+
+/* Highlighted boxes for each section - orange shades */
+main section {
+    flex: 0 0 200px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(230, 92, 0, 0.1); 
+    border: 1px solid rgba(230, 92, 0, 0.3); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    min-height: 200px;
+}
+
+/* Section headings */
+main section h2 {
+    margin-top: 0;
+    color: #e65c00; 
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+/* Optional: scrollbar style for main container */
+main::-webkit-scrollbar {
+    height: 8px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: rgba(230, 92, 0, 0.5);
+    border-radius: 4px;
+}
+
+main::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.05);
+}
