@@ -20,48 +20,51 @@
 </header>
 
 <!-- Homepage content -->
-<div class="full-screen-box">
-    <div class="content-box">
+<div class="homepage-content">
+    <div class="store-list-box">
         <h2>Our Stores</h2>
         <p>Check out our outlets across Singapore!</p>
         <div class="store-list">
-            <p>Ichiban Boshi
-                @Great World City
-            </p>
-            <p>Ichiban Boshi 
-                @Clementi Mall
-            </p>
-            <p>Sushi Go
-                @Punggol Coast Mall
-            </p>
-            <p>Suhi Go
-                @Vivo City
-            </p>
-            <p>Idaten Udon 
-                @Nex Serangoon
-            </p>
-            <p>Idaten Udon
-                @Science Park
-            </p>
-            <p>Yakiniku Go
-                @Suntec City
-            </p>
+            <p>Ichiban Boshi @Great World City</p>
+            <p>Ichiban Boshi @Clementi Mall</p>
+            <p>Sushi Go @Punggol Coast Mall</p>
+            <p>Sushi Go @Vivo City</p>
+            <p>Idaten Udon @Nex Serangoon</p>
+            <p>Idaten Udon @Science Park</p>
+            <p>Yakiniku Go @Suntec City</p>
         </div>
     </div>
-
-    <div class="content-box">
-        <h2>Make a Reservation</h2>
+    <!-- Reservation box -->
+    <div class="reservation-box">
+        <div class="reservation-title">Make a Reservation</div>
         <form>
             <label>Name:</label>
-            <input type="text" placeholder="Your name" /><br><br>
+            <input type="text" placeholder="Your full name" />
+            <label>Contact Number:</label>
+            <input type="text" placeholder="Phone number"/>
             <label>Date:</label>
-            <input type="date" /><br><br>
+            <input type="date" />
             <label>Time:</label>
-            <input type="time" /><br><br>
+            <input type="time" />
             <button type="submit">Reserve</button>
         </form>
     </div>
 </div>
+
+<script>
+const form = document.getElementById("reservation-form");
+const button = document.getElementById("reserve-btn");
+
+form.addEventListener("input", () => {
+    const allFilled = [...form.querySelectorAll("input[required]")]
+        .every(input => input.value.trim() !== "");
+    if (allFilled) {
+        button.classList.add("active");
+    } else {
+        button.classList.remove("active");
+    }
+});
+</script>
 
 </body>
 </html>
