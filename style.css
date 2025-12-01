@@ -1,140 +1,121 @@
 body {
-border-bottom: 2px solid #ddd;
+    margin: 0;
+    font-family: sans-serif;
+    border-bottom: 2px solid #ddd;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    border-bottom: 2px solid #ddd;
 }
 
 nav ul {
-list-style: none;
-display: flex;
-justify-content: center;
-gap: 40px;
-width: 100%;
-padding: 0;
-margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    position: relative;
 }
 
 nav ul li a {
-text-decoration: none;
-color: #c0392b;
-font-size: 18px;
-padding: 15px 30px;
-background: #ffe5cc;
-border-radius: 4px;
-border: 2px solid orange;
-display: block;
-text-align: center;
-}
-
-#about-section-container {
-display: flex;
-justify-content: center;
-gap: 40px;
-padding: 40px;
-}
-
-.about-box, .milestone-box {
-width: 40%;
-background: white;
-padding: 20px;
-border: 2px solid #c0392b;
-border-radius: 6px;
-}
-
-.about-title, .milestone-title {
-background: #c0392b;
-color: white;
-padding: 10px;
-font-weight: bold;
-text-align: center;
-margin-bottom: 20px;
-}
-.milestone-item {
-margin-bottom: 15px;
-}
-.milestone-year {
-font-weight: bold;
-}
-.timeline {
-    position: relative;
-    width: 4px;
-    background: #c0392b;
-    margin: 0 auto;
-    min-height: 900px;
-}
-.timeline-item {
-    position: relative;
-    width: 100%;
-    margin: 70px 0;
-    display: flex;
-    align-items: flex-start;
-}
-.timeline-date {
-    font-size: 18px;
-    font-weight: bold;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
     color: #c0392b;
-    margin-bottom: 8px;
+    font-size: 18px;
 }
-.timeline-content {
-    background: #fff2e6;
-    border: 2px solid #c0392b;
-    border-radius: 6px;
-    padding: 18px 22px;
-    width: 700px;       
-    max-width: 700px;
+
+nav ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    right: 0;
+    width: 1px;
+    height: 50%;
+    background: #ccc;
+}
+
+/* Box spacing + centering */
+.full-screen-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;          
+    background: white;
     box-sizing: border-box;
-    position: relative;
-    font-size: 15px;
 }
-.timeline-item:nth-child(odd) {
-    justify-content: flex-start;
+
+#history-box,
+#milestone-box {
+    width: 70%;
+    max-width: 900px;
+    min-height: 600px; 
+    background: white;
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 40px auto;
 }
-.timeline-item:nth-child(odd) .timeline-date,
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-left: 10px;   
-    text-align: left;
+
+/* make the full-screen container flex to center vertically */
+.full-screen-box {
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    width: 100%;
+    padding: 50px 0;
+    background: white;
+    box-sizing: border-box;
 }
-.timeline-item:nth-child(odd) .timeline-content::before {
-    content: "";
-    position: absolute;
-    left: -15px;
-    top: 45%;
-    transform: translateY(-50%);
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 15px solid #c0392b;
+
+/* Titles inside the boxes */
+.about-title,
+.milestone-title {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    background: #c0392b;
+    color: white;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 25px;
 }
-.timeline-item:nth-child(even) {
-    justify-content: flex-end;
+
+/* Text inside the boxes */
+.about-text p {
+    font-size: 22px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #333;
 }
-.timeline-item:nth-child(even) .timeline-date,
-.timeline-item:nth-child(even) .timeline-content {
-    margin-right: 50px;  
-    text-align: right;
-}
-.timeline-item:nth-child(even) .timeline-content::before {
-    content: "";
-    position: absolute;
-    right: -15px;
-    top: 45%;
-    transform: translateY(-50%);
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #c0392b;
-}/* Responsive for smaller screens */
-@media screen and (max-width: 768px) {
-    .timeline-item {
-        flex-direction: column;
-        align-items: center;
-    }
-    .timeline-date,
-    .timeline-content {
-        margin: 0 !important;
-        text-align: center !important;
-    }
-    .timeline-content {
-        width: 90% !important;
-        max-width: 90% !important;
-    }
-    .timeline-content::before {
-        display: none; /* remove arrows */
-    }
+
+/* Milestone image */
+.milestone-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: contain;
 }
