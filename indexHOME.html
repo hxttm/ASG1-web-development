@@ -10,8 +10,8 @@
     <h1>Welcome to RE&S Singapore</h1>
     <nav>
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="indexHOME.html">HOME</a></li>
+            <li><a href="indexHOME.html">ABOUT US</a></li>
             <li><a href="special.html">SEASONAL SPECIAL</a></li>
             <li><a href="member.html">BECOME A MEMBER</a></li>
             <li><a href="contact.html">CONTACT</a></li>
@@ -19,8 +19,8 @@
     </nav>
 </header>
 
-<!-- Homepage content -->
 <div class="homepage-content">
+    <!-- Stores list box -->
     <div class="store-list-box">
         <h2>Our Stores</h2>
         <p>Check out our outlets across Singapore!</p>
@@ -34,19 +34,20 @@
             <p>Yakiniku Go @Suntec City</p>
         </div>
     </div>
+
     <!-- Reservation box -->
     <div class="reservation-box">
         <div class="reservation-title">Make a Reservation</div>
-        <form>
+        <form id="reservation-form">
             <label>Name:</label>
-            <input type="text" placeholder="Your full name" />
+            <input type="text" placeholder="Your full name" required />
             <label>Contact Number:</label>
-            <input type="text" placeholder="Phone number"/>
+            <input type="text" placeholder="Phone number" required/>
             <label>Date:</label>
-            <input type="date" />
+            <input type="date" required />
             <label>Time:</label>
-            <input type="time" />
-            <button type="submit">Reserve</button>
+            <input type="time" required />
+            <button type="submit" id="reserve-btn">Reserve</button>
         </form>
     </div>
 </div>
@@ -59,9 +60,9 @@ form.addEventListener("input", () => {
     const allFilled = [...form.querySelectorAll("input[required]")]
         .every(input => input.value.trim() !== "");
     if (allFilled) {
-        button.classList.add("active");
+        button.style.backgroundColor = "#2ecc71"; // green when filled
     } else {
-        button.classList.remove("active");
+        button.style.backgroundColor = "#c0392b"; // default red
     }
 });
 </script>
