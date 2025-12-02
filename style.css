@@ -261,20 +261,21 @@ nav ul li:not(:last-child)::after {
 /* Boxes styling */
 #history-box,
 #milestone-box {
-    flex: 0 0 45%;              
-    min-width: 250px;
-    max-width: 500px;
+    flex: 0 0 400px;       
+    width: 400px;           
+    min-width: 250px;       
+    max-width: 100%;        
     min-height: 600px;
     background: white;
     border: 2px solid #c0392b;
     border-radius: 10px;
-    padding: 20px;              
+    padding: 20px;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;     
-    justify-content: flex-start;  
-    align-items: stretch;      
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 /* Wrapper to center the title */
 .title-wrapper {
@@ -283,9 +284,7 @@ nav ul li:not(:last-child)::after {
     justify-content: center;       
     align-items: center;          
 }
-/* Titles styling  */
-.about-title,
-.milestone-title {
+.about-title {
     font-size: 22px;       
     font-weight: bold;
     background: #c0392b;
@@ -294,15 +293,25 @@ nav ul li:not(:last-child)::after {
     border-radius: 6px;
     text-align: center;
 }
-/* Text content styling */
+.milestone-title {
+    font-size: 22px;       
+    font-weight: bold;
+    background: #c0392b;
+    color: white;
+    padding: 12px 0;          
+    border-radius: 6px;
+    text-align: center;
+    width: 100%;               
+    box-sizing: border-box;    
+}
 .about-text {
-    padding: 20px;
+    padding: 5px;
     text-align: center;           
 }
 .about-text p {
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: #333;
 }
 /* Milestone image wrapper */
