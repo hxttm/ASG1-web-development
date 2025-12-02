@@ -20,74 +20,85 @@
 </header>
 
 <div class="homepage-content">
-<div class="store-list-box">
-    <div class="store-title">Our Stores</div>
-    <div class="store-list">
-        <div class="homepage-content">
+
+    <!-- Store List Box aligned left -->
     <div class="store-list-box">
         <div class="store-title">Our Stores</div>
         <div class="store-list">
             <div class="store-item">
-                <img src="pictures/gwc.jpg" alt="Ichiban Boshi @Great World City">
-                <div class="store-name">Ichiban Boshi @Great World City</div>
+                <img src="pictures/OIP.webp" alt="">
+                <div class="store-overlay">Ichiban Boshi @Great World City</div>
             </div>
+
             <div class="store-item">
-                <img src="pictures/clementi.jpg" alt="Ichiban Boshi @Clementi Mall">
-                <div class="store-name">Ichiban Boshi @Clementi Mall</div>
+                <img src="pictures/c73ecc27d2a9eaa735b1ee95304ba588.jpeg" alt="">
+                <div class="store-overlay">Ichiban Boshi @Clementi Mall</div>
             </div>
+
             <div class="store-item">
-                <img src="pictures/punggol.jpg" alt="Sushi Go @Punggol Coast Mall">
-                <div class="store-name">Sushi Go @Punggol Coast Mall</div>
+                <img src="pictures/R (1).jpg" alt="">
+                <div class="store-overlay">Sushi Go @Punggol Coast Mall</div>
             </div>
+
             <div class="store-item">
-                <img src="pictures/vivo.jpg" alt="Sushi Go @Vivo City">
-                <div class="store-name">Sushi Go @Vivo City</div>
+                <img src="pictures/scale.webp" alt="">
+                <div class="store-overlay">Sushi Go @Vivo City</div>
+            </div>
+
+            <div class="store-item">
+                <img src="pictures/R2788-photo-final-2.webp" alt="">
+                <div class="store-overlay">Idaten Udon @Nex Serangoon</div>
+            </div>
+
+            <div class="store-item">
+                <img src="pictures/OIP (1).webp" alt="">
+                <div class="store-overlay">Idaten Udon @Science Park</div>
+            </div>
+
+            <div class="store-item">
+                <img src="pictures/wagyu-halal-japanesefood-15.jpg" alt="">
+                <div class="store-overlay">Yakiniku Go @Suntec City</div>
             </div>
         </div>
     </div>
-</div>
-
-        <div class="store-item">Ichiban Boshi @Great World City</div>
-        <div class="store-item">Ichiban Boshi @Clementi Mall</div>
-        <div class="store-item">Sushi Go @Punggol Coast Mall</div>
-        <div class="store-item">Sushi Go @Vivo City</div>
-        <div class="store-item">Idaten Udon @Nex Serangoon</div>
-        <div class="store-item">Idaten Udon @Science Park</div>
-        <div class="store-item">Yakiniku Go @Suntec City</div>
+ <!-- Basic Food Safety Box -->
+    <div class="food-safety-box">
+        <img src="pictures\OIP (2).webp" alt="Food Safety" class="food-safety-img">
+        <div class="food-title">Basic Food Safety</div>
+        <div class="food-content">
+            <p>At RE&S, we prioritize food safety above all. All ingredients 
+                are carefully stored and prepared following strict hygiene standards. 
+                Staff are trained to maintain a clean environment, ensuring safe and 
+                delicious meals every time.</p>
+            <p>Remember to wash hands frequently, keep surfaces sanitized, and cook 
+                ingredients to the proper temperatures.</p>
+        </div>
     </div>
+
+<!-- Call-to-action to reserve -->
+<div class="reserve-text-box">
+    <p class="reserve-text">Don't just crave it, claim it!</p>
+    <div class="reserve-arrow">⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</div>
 </div>
 
-    <!-- Reservation box -->
+    <!-- Reservation box below -->
     <div class="reservation-box">
         <div class="reservation-title">Make a Reservation</div>
         <form id="reservation-form">
             <label>Name:</label>
             <input type="text" placeholder="Your full name" required />
+
             <label>Contact Number:</label>
             <input type="text" placeholder="Phone number" required/>
+
             <label>Date:</label>
             <input type="date" required />
+
             <label>Time:</label>
             <input type="time" required />
+
             <button type="submit" id="reserve-btn">Reserve</button>
         </form>
     </div>
+
 </div>
-
-<script>
-const form = document.getElementById("reservation-form");
-const button = document.getElementById("reserve-btn");
-
-form.addEventListener("input", () => {
-    const allFilled = [...form.querySelectorAll("input[required]")]
-        .every(input => input.value.trim() !== "");
-    if (allFilled) {
-        button.style.backgroundColor = "#2ecc71"; // green when filled
-    } else {
-        button.style.backgroundColor = "#c0392b"; // default red
-    }
-});
-</script>
-
-</body>
-</html>

@@ -1,103 +1,123 @@
-/* HOME PAGE*/
-/* Scrollable stores frame */
-.store-list {
-    height: 200px;           
-    overflow-y: auto;        
-    border: 2px solid #c0392b;
-    border-radius: 6px;
-    padding: 15px;
-    width: 100%;             
-    background: white;
-}
-.store-list p {
-    margin: 10px 0;          
-    font-size: 20px;
-    text-align: left;
-}
-/* Container for the homepage content*/
 .homepage-content {
     display: flex;
-    gap: 30px;               
+    gap: 30px;
     justify-content: center;
-    flex-wrap: wrap;          
+    flex-wrap: wrap;
     padding: 50px 20px;
 }
+/* Our Stores Box */
 .store-list-box {
-    width: 400px;
-    max-width: 90%;
+    width: 400px;        
+    max-width: 100%;
     border: 2px solid #c0392b;
-    border-radius: 10px;
-    padding: 15px;         
+    border-radius: 12px;
+    padding: 20px;
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 450px;     
-    overflow-y: auto;     
+    max-height: 650px;
+    overflow-y: auto;
 }
 .store-title {
-    font-size: 23px;
+    font-size: 28px;          
     font-weight: bold;
     text-align: center;
-    background-color: #c0392b; 
+    background-color: #c0392b;
     color: white;
-    padding: 12px 20px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    width: 100%;
+    padding: 15px 20px;      
+    border-radius: 8px;      
+    margin-bottom: 20px;       
 }
+/* Store List */
 .store-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
-.store-item {
-    border: 2px solid orange;
-    background:#ffede2; 
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 18px;
-}
-
-/* Pictures */
-.store-list {
-    display: flex;
-    flex-wrap: wrap;       /* wrap on smaller screens */
-    gap: 20px;             
-    justify-content: center;
-}
-
 .store-item {
     position: relative;
-    width: 250px;          /* width of each image */
-    height: 150px;         
+    width: 100%;
+    height: 220px;
+    border-radius: 14px;
     overflow: hidden;
-    border-radius: 10px;
 }
 
 .store-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;     
-    display: block;
-    transition: transform 0.3s ease;
+    object-fit: cover;
 }
-
-.store-item:hover img {
-    transform: scale(1.05); 
-}
-
-.store-name {
+.store-overlay {
     position: absolute;
-    bottom: 0;             
+    bottom: 0;
     left: 0;
     width: 100%;
-    text-align: center;
-    padding: 10px 5px;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.55);
     color: white;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Food Safety Box */
+.food-safety-box {
+    width: 400px;          
+    max-width: 100%;
+    border: 2px solid #c0392b;
+    border-radius: 12px;
+    padding: 20px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.food-title {
+    font-size: 28px;
     font-weight: bold;
-    font-size: 16px;
+    text-align: center;
+    background-color: #c0392b;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.food-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+/* Image inside Food Safety box */
+.food-safety-img {
+    width: 100%;
+    height: 200px;          
+    object-fit: cover;       
+    border-radius: 12px;
+    margin-bottom: 15px;     
+}
+
+/* Reserve text box */
+.reserve-text-box {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.reserve-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #c0392b;
+    margin: 0;
+}
+.reserve-arrow {
+    font-size: 36px;       
+    color: #c0392b;
+    line-height: 0.5;
+    letter-spacing: 2px;   
 }
 
 /* Reservation box */
@@ -127,7 +147,7 @@
 .reservation-box form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
 }
 .reservation-box label {
     margin-top: 10px;
@@ -167,6 +187,8 @@
 #reserve-btn.active {
     background-color: #27ae60;
 }
+
+
 /* ABOUT US*/
 body {
     margin: 0;
