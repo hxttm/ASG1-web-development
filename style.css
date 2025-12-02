@@ -207,19 +207,24 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 5px solid #b7b7b7;
+    position: relative;  
 }
 h1 {
     text-align: center;
     color: orange;
     padding: 20px 0;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #b7b7b7;
     margin-bottom: 20px;
+    position: relative;  
+    z-index: 1;
 }
 /* Navigation */
 nav {
     width: 100%;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #b7b7b7;
+    position: relative;
+    z-index: 1;
 }
 nav ul {
     list-style: none;
@@ -249,6 +254,27 @@ nav ul li:not(:last-child)::after {
     width: 1px;
     height: 50%;
     background: #ccc;
+}
+.header-container {
+    position: relative;
+}
+/* Pattern background */
+.pattern-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-image: url('pictures/japanese-hand-fan-pattern-background-260nw-225470020.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; 
+    z-index: 0; 
+}
+.header-container h1,
+.header-container nav {
+    position: relative;
+    z-index: 1; 
 }
 .flex-container {
     display: flex;
