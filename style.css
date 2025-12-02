@@ -22,18 +22,84 @@
     flex-wrap: wrap;          
     padding: 50px 20px;
 }
-/* Stores list box */
 .store-list-box {
-    width: 400px;             
+    width: 400px;
     max-width: 90%;
     border: 2px solid #c0392b;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;         
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 450px;     
+    overflow-y: auto;     
 }
+.store-title {
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #c0392b; 
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.store-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.store-item {
+    border: 2px solid orange;
+    background:#ffede2; 
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+/* Pictures */
+.store-list {
+    display: flex;
+    flex-wrap: wrap;       /* wrap on smaller screens */
+    gap: 20px;             
+    justify-content: center;
+}
+
+.store-item {
+    position: relative;
+    width: 250px;          /* width of each image */
+    height: 150px;         
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.store-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.store-item:hover img {
+    transform: scale(1.05); 
+}
+
+.store-name {
+    position: absolute;
+    bottom: 0;             
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 5px;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
 /* Reservation box */
 .reservation-box {
     width: 500px;              
@@ -148,68 +214,74 @@ nav ul li:not(:last-child)::after {
     height: 50%;
     background: #ccc;
 }
-/* Box spacing + centering */
-.full-screen-box {
+.flex-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 50px 0;          
-    background: white;
-    box-sizing: border-box;
+    justify-content: center;      
+    align-items: flex-start;
+    gap: 30px;                   
+    flex-wrap: wrap;
+    padding-top: 60px;           
 }
+/* Boxes styling */
 #history-box,
 #milestone-box {
-    width: 70%;
-    max-width: 900px;
-    min-height: 800px; 
+    flex: 0 0 45%;              
+    min-width: 250px;
+    max-width: 500px;
+    min-height: 600px;
     background: white;
     border: 2px solid #c0392b;
     border-radius: 10px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;              
     box-sizing: border-box;
-    margin: 40px auto;
-}
-/* make the full-screen container flex to center vertically */
-.full-screen-box {
     display: flex;
-    justify-content: center;   
-    align-items: center;       
-    width: 100%;
-    padding: 50px 0;
-    background: white;
-    box-sizing: border-box;
+    flex-direction: column;     
+    justify-content: flex-start;  
+    align-items: stretch;      
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
 }
-/* Titles inside the boxes */
+/* Wrapper to center the title */
+.title-wrapper {
+    flex: 0 0 120px;              
+    display: flex;
+    justify-content: center;       
+    align-items: center;          
+}
+/* Titles styling  */
 .about-title,
 .milestone-title {
-    font-size: 25px;
+    font-size: 22px;       
     font-weight: bold;
-    text-align: center;
     background: #c0392b;
     color: white;
-    padding: 12px 20px;
-    width: 100%;
+    padding: 12px 20px;    
     border-radius: 6px;
-    margin-bottom: 25px;
+    text-align: center;
 }
-/* Text inside the boxes */
+/* Text content styling */
+.about-text {
+    padding: 20px;
+    text-align: center;           
+}
 .about-text p {
-    font-size: 22px;
-    line-height: 1.8;
-    text-align: justify;
-    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 12px;
     color: #333;
 }
-/* Milestone image */
-.milestone-img {
+/* Milestone image wrapper */
+.milestone-content {
+    display: flex;            
+    justify-content: center;   
+    align-items: flex-start;   
     width: 100%;
-    max-width: 800px;
+    margin-top: 10px;         
+}
+/* Make the image bigger */
+.milestone-img {
+    width: 100%;                
+    max-width: 450px;           
     height: auto;
     object-fit: contain;
+    display: block;             
 }
-
-
