@@ -69,7 +69,7 @@
     box-sizing: border-box;     
 }
 .food-title {
-    font-size: 28px;          
+    font-size: 23px;          
     font-weight: bold;
     text-align: center;
     color: #c0392b;             
@@ -95,6 +95,7 @@
 }
 .food-content p {
     font-size: 18px;
+    font-family: Merriweather;
     line-height: 1.6;
     margin-bottom: 15px;
     color: #333;
@@ -139,7 +140,7 @@
     align-items: center;
 }
 .reservation-box .reservation-title {
-    font-size: 20px;       
+    font-size: 23px;       
     width: 60%;           
     padding: 8px 15px;    
     text-align: center;
@@ -162,7 +163,7 @@
 .reservation-box button {
     margin-top: 5px;
     padding: 8px;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 6px;
     border: 1px solid #ccc;
     width: 100%;
@@ -223,7 +224,6 @@ body {
     opacity: 0.2;
     z-index: 0;
 }
-
 h1 {
     text-align: center;
     color: orange;
@@ -262,6 +262,7 @@ nav ul li:not(:last-child)::after {
     height: 50%;
     background: grey;
 }
+
 .flex-container {
     display: flex;
     gap: 30px;
@@ -323,6 +324,7 @@ nav ul li:not(:last-child)::after {
 }
 .about-text p {
     font-size: 18px;
+    font-family: Merriweather;
     line-height: 1.4;
     margin: 4px 0;
     text-align: center;
@@ -372,7 +374,7 @@ nav ul li:not(:last-child)::after {
     padding: 8px 12px;
 }
 .top-image-wrapper p {
-    font-size: 16px; 
+    font-size: 15px; 
     line-height: 1.5;
     margin: 10px 0 0 0;
     flex: 1; 
@@ -404,20 +406,17 @@ nav ul li:not(:last-child)::after {
     padding: 40px 20px;
     text-align: center;
 }
-
-/* FULLER, IMAGE-BACKGROUND INTRO BOX */
 .seasonal-intro-box {
     position: relative;
     width: 90%;                   /* makes it more full-screen */
     max-width: 1000px;            /* prevents it from being too huge */
     margin: 0 auto 40px auto;
 
-    border: 3px solid #c0392b;
+    border: 1px solid white;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-
 .seasonal-intro-box {
     background-image: url("pictures/asian-chef-hands-preparing-sushi-japanese-food-japanese-chef-making-sushi-restaurant-young-chef-s_158001-3660.avif");
     background-size: cover;        
@@ -428,7 +427,6 @@ nav ul li:not(:last-child)::after {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
 /* Dark overlay for text readability */
 .seasonal-intro-box::after {
     content: "";
@@ -437,76 +435,99 @@ nav ul li:not(:last-child)::after {
     background: rgba(0,0,0,0.35);
     z-index: 2;
 }
-
-/* TEXT CONTAINER */
 .seasonal-intro-content {
     position: relative;
     z-index: 3;
     padding: 45px 30px;
 }
-
-/* Title */
 .seasonal-title {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
     color: white;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
-
-/* Description text */
 .seasonal-text {
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 500;
     color: white;
-    line-height: 1.5;
+    line-height: 1.6;
     max-width: 750px;
     margin: 0 auto;
 }
-
-/* GRID FOR SEASONS */
 .season-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: column; 
     gap: 25px;
 }
-
+/* SEASON GRID: 2x2 layout */
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two boxes per row */
+    gap: 20px;
+    padding: 20px;
+}
+/* INDIVIDUAL SEASON BOX */
 .season-box {
     background: white;
     border: 2px solid #c0392b;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.season-box h3 {
-    font-size: 20px;
-    color: #c0392b;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-/* IMAGES */
-.season-images {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    height: 350px;
 }
-
-.season-images img {
+/* SEASON TITLE */
+.season-box h3 {
+    font-size: 23px;
+    color: #c0392b;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* SEASON IMAGES CONTAINER: side by side */
+.season-images {
+    display: flex;
+    justify-content: space-between; /* left and right image */
     width: 100%;
-    height: 150px;
+    gap: 15px;
+}
+/* EACH IMAGE + LABEL GROUP */
+.season-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%; /* roughly half of the box */
+}
+/* IMAGES */
+.season-item img {
+    width: 100%;
+    height: 180px;      
     object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 6px;
+}
+/* DISH LABELS */
+.dish-name {
+    font-size: 19px;
+    font-family: Merriweather;
+    font-weight: 500;
+    text-align: center;
+    margin: 2px 0 0 0;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .season-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr; /* stack all boxes on small screens */
     }
-}
-@media (max-width: 600px) {
-    .season-grid {
-        grid-template-columns: 1fr;
+    .season-images {
+        flex-direction: column; /* stack images inside box */
+        align-items: center;
+    }
+    .season-item {
+        width: 80%;
     }
 }
