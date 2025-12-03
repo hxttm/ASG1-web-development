@@ -6,7 +6,6 @@
     flex-wrap: wrap;           
     padding: 50px 20px;
 }
-/* Our Stores Box */
 .store-list-box {
     width: 400px;        
     max-width: 100%;
@@ -83,8 +82,6 @@
     width: 100%;               
     box-sizing: border-box;     
 }
-
-/* Food Safety Box */
 .food-safety-box {
     width: 400px;          
     max-width: 100%;
@@ -96,7 +93,6 @@
     flex-direction: column;
     justify-content: flex-start;
 }
-/* Food Safety content */
 .food-content p {
     font-size: 18px;
     line-height: 1.6;
@@ -110,8 +106,6 @@
     margin-top: 2px;  
     margin-bottom: 20px;
 }
-
-/* Reserve text box */
 .reserve-text-box {
     width: 100%;
     text-align: center;
@@ -133,8 +127,6 @@
     line-height: 0.5;
     letter-spacing: 2px;   
 }
-
-/* Reservation box */
 .reservation-box {
     width: 500px;              
     max-width: 90%;
@@ -146,7 +138,6 @@
     flex-direction: column;
     align-items: center;
 }
-/* Reservation title */
 .reservation-box .reservation-title {
     font-size: 20px;       
     width: 60%;           
@@ -209,21 +200,16 @@ body {
     font-family: sans-serif;
     position: relative;
 }
-
-/* HEADER */
 .header-container {
     position: relative;
-    overflow: hidden; /* prevent pattern from spilling outside */
-    padding-bottom: 0; /* remove extra space below header */
+    overflow: hidden; 
+    padding-bottom: 0; 
 }
-
 .header-container h1,
 .header-container nav {
     position: relative;
     z-index: 1; 
 }
-
-/* Pattern background */
 .pattern-background {
     position: absolute;
     top: 0;
@@ -238,18 +224,15 @@ body {
     z-index: 0;
 }
 
-/* HEADER STYLING */
 h1 {
     text-align: center;
     color: orange;
     padding: 20px 0;
     margin: 0;
 }
-
 nav {
     width: 100%;
 }
-
 nav ul {
     list-style: none;
     display: flex;
@@ -258,13 +241,11 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-
 nav ul li {
     flex: 1;
     text-align: center;
     position: relative;
 }
-
 nav ul li a {
     display: block;
     padding: 15px 0;
@@ -272,7 +253,6 @@ nav ul li a {
     color: #c0392b;
     font-size: 18px;
 }
-
 nav ul li:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -286,7 +266,7 @@ nav ul li:not(:last-child)::after {
     display: flex;
     gap: 30px;
     padding: 40px 20px;
-    justify-content: center; /* center all columns */
+    justify-content: center; 
     align-items: stretch;
 }
 /* LEFT COLUMN (stacked boxes) */
@@ -296,15 +276,12 @@ nav ul li:not(:last-child)::after {
     gap: 20px;
     flex: 1; /* base width */
 }
-
-/* RIGHT COLUMN (milestone box) */
 .right-column {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex: 1.5; /* makes it 1.5x wider than left column */
+    flex: 1.5; 
 }
-/* CONTENT BOXES: fill their column width */
 .content-box {
     background: white;
     border: 2px solid #c0392b;
@@ -317,13 +294,10 @@ nav ul li:not(:last-child)::after {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     width: 100%; /* fill parent column */
 }
-
 /* Make left column boxes equal height */
 .left-column > .content-box {
     flex: 1;
 }
-
-/* TITLE */
 .title-wrapper {
     flex: 0 0 auto;
     display: flex;
@@ -331,7 +305,6 @@ nav ul li:not(:last-child)::after {
     align-items: center;
     margin-bottom: 10px;
 }
-
 .about-title, .milestone-title {
     font-size: 28px;
     font-weight: bold;
@@ -341,7 +314,6 @@ nav ul li:not(:last-child)::after {
     border-radius: 6px;
     text-align: center;
 }
-
 /* ABOUT IMAGE + PARAGRAPH */
 .about-text {
     display: flex;
@@ -349,7 +321,6 @@ nav ul li:not(:last-child)::after {
     align-items: center;
     gap: 10px;
 }
-
 .about-text p {
     font-size: 18px;
     line-height: 1.4;
@@ -362,8 +333,6 @@ nav ul li:not(:last-child)::after {
     line-height: 1.6; 
     margin-bottom: 6px;
 }
-
-/* IMAGE CONTAINER */
 .about-image-container {
     width: 100%;  
     height: 120px;
@@ -371,13 +340,11 @@ nav ul li:not(:last-child)::after {
     border-radius: 10px;
     position: relative;
 }
-
 .about-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .about-image-container h2 {
     position: absolute;
     top: 50%;
@@ -394,36 +361,29 @@ nav ul li:not(:last-child)::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 2; /* image + text take more vertical space */
+    flex: 2; 
     width: 100%;
 }
-
 .about-image-container {
     height: 250px; 
 }
-
 .about-image-container h2 {
     font-size: 28px; 
     padding: 8px 12px;
 }
-
 .top-image-wrapper p {
-    font-size: 16px; /* larger paragraph text */
+    font-size: 16px; 
     line-height: 1.5;
     margin: 10px 0 0 0;
-    flex: 1; /* fill remaining space in the box */
+    flex: 1; 
 }
-
-/* MILESTONE BOX */
 #milestone-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100%; /* stretch to match left boxes combined height */
+    height: 100%; 
 }
-
-/* MILESTONE IMAGE */
 .milestone-content {
     width: 100%;
     display: flex;
@@ -431,10 +391,122 @@ nav ul li:not(:last-child)::after {
     align-items: center;
     flex: 1; /* fill remaining height */
 }
-
 .milestone-img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     border-radius: 6px;
+}
+
+
+/* SEASONAL SPECIALS */
+.seasonal-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* FULLER, IMAGE-BACKGROUND INTRO BOX */
+.seasonal-intro-box {
+    position: relative;
+    width: 90%;                   /* makes it more full-screen */
+    max-width: 1000px;            /* prevents it from being too huge */
+    margin: 0 auto 40px auto;
+
+    border: 3px solid #c0392b;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.seasonal-intro-box {
+    background-image: url("pictures/asian-chef-hands-preparing-sushi-japanese-food-japanese-chef-making-sushi-restaurant-young-chef-s_158001-3660.avif");
+    background-size: cover;        
+    background-position: center bottom; 
+    background-repeat: no-repeat;
+    color: white;                  
+    padding: 40px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Dark overlay for text readability */
+.seasonal-intro-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 2;
+}
+
+/* TEXT CONTAINER */
+.seasonal-intro-content {
+    position: relative;
+    z-index: 3;
+    padding: 45px 30px;
+}
+
+/* Title */
+.seasonal-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 12px;
+}
+
+/* Description text */
+.seasonal-text {
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    line-height: 1.5;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* GRID FOR SEASONS */
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.season-box {
+    background: white;
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.season-box h3 {
+    font-size: 20px;
+    color: #c0392b;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* IMAGES */
+.season-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.season-images img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .season-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .season-grid {
+        grid-template-columns: 1fr;
+    }
 }
