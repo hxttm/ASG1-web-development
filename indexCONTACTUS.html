@@ -19,3 +19,96 @@
         </ul>
     </nav>
 </header>
+
+<!-- ENQUIRY FORM SECTION -->
+<section class="enquiry-box">
+    <h2>Send Us an Enquiry</h2>
+    <form id="enquiry-form">
+        <!-- Type of enquiry -->
+        <label for="enquiry-type">Type of Enquiry:</label>
+        <select id="enquiry-type" name="enquiry-type" required>
+            <option value="">-- Select Enquiry Type --</option>
+            <option value="general">General</option>
+            <option value="feedback">Feedback</option>
+            <option value="reservation">Corporate sales</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- Date of visit -->
+        <label for="visit-date">Date of Visit:</label>
+        <input type="date" id="visit-date" name="visit-date" required>
+
+        <!-- Outlet -->
+        <label for="outlet">Outlet:</label>
+        <select id="outlet" name="outlet" required>
+            <option value="">-- Select Outlet --</option>
+            <option value="greatworld">Ichiban Boshi @Great World City</option>
+            <option value="clementi">Ichiban Boshi @Clementi Mall</option>
+            <option value="punggol">Sushi Go @Punggol Coast Mall</option>
+            <option value="vivo">Sushi Go @Vivo City</option>
+            <option value="nex">Idaten Udon @Nex Serangoon</option>
+            <option value="science">Idaten Udon @Science Park</option>
+            <option value="suntec">Yakiniku Go @Suntec City</option>
+        </select>
+
+        <!-- Message -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+        <!-- Attach images -->
+        <label for="attachments">Attach Images (Optional):</label>
+        <input type="file" id="attachments" name="attachments" multiple accept="image/*">
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <!-- Name -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required pattern="[0-9]{8}">
+
+        <!-- Submit -->
+        <button type="submit" id="enquiry-submit">Submit</button>
+    </form>
+</section>
+
+<!-- CONFIRMATION POPUP -->
+<section id="enquiry-confirmation">
+    <div class="confirmation-box">
+        <h2>Thank You!</h2>
+        <p>Your enquiry has been sent successfully. We will get back to you soon.</p>
+        <button onclick="closeEnquiryConfirmation()">Close</button>
+    </div>
+</section>
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript">
+const enquiryForm = document.getElementById("enquiry-form");
+
+enquiryForm.addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent page reload
+
+    // hide the form
+    enquiryForm.style.display = "none";
+
+    // show confirmation popup
+    const popup = document.getElementById("enquiry-confirmation");
+    popup.style.display = "flex";
+});
+
+function closeEnquiryConfirmation() {
+    const popup = document.getElementById("enquiry-confirmation");
+    popup.style.display = "none";
+
+    // reset the form and show it again
+    enquiryForm.reset();
+    enquiryForm.style.display = "flex";
+}
+</script>
+
+</body>
+</html>

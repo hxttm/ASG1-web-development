@@ -173,22 +173,17 @@
     border: 1px solid #ccc;
 }
 .reservation-box button {
-    margin-top: 5px;
-    padding: 8px;
-    font-size: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 90%;
-}
-.reservation-box button {
     margin-top: 15px;
-    background-color: #cfb8b8;
-    justify-content: center;
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
     color: white;
     border: none;
     cursor: pointer;
     transition: background 0.3s;
 }
+/* Hover effect for buttons */
 .reservation-box button:hover {
     background-color: #e74c3c;
 }
@@ -207,6 +202,14 @@
     background-color: #27ae60;
 }
 
+/* Optional: make the Number of Guests input a bit smaller on mobile */
+@media(max-width: 600px) {
+    .reservation-box input,
+    .reservation-box button,
+    .reservation-box label {
+        width: 95%;
+    }
+}
 
 /* ABOUT US*/
 body {
@@ -905,4 +908,96 @@ nav ul li:not(:last-child)::after {
     .confirmation-box p {
         font-size: 16px;
     }
+}
+
+
+/* ENQUIRY FORM */
+.enquiry-box {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.enquiry-box h2 {
+    text-align: center;
+    color: #c0392b;
+    margin-bottom: 20px;
+}
+.enquiry-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.enquiry-box label {
+    width: 90%;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.enquiry-box input,
+.enquiry-box select,
+.enquiry-box textarea {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.enquiry-box button {
+    margin-top: 15px;
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: #cfb8b8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.enquiry-box button:hover {
+    background-color: #2ecc71;
+}
+
+/* Confirmation popup */
+#enquiry-confirmation {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+.confirmation-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.confirmation-box h2 {
+    color: green;
+    margin-bottom: 10px;
+}
+.confirmation-box button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.confirmation-box button:hover {
+    background-color: #2ecc71;
 }
