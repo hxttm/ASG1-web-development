@@ -568,7 +568,7 @@ nav ul li:not(:last-child)::after {
 }
 
 
-/* BECOMING MEMBER / 4 Cards Hero Image */
+/* BECOMING MEMBER */
 .cards-image-container {
     position: relative;
     width: 80%;           /* shrink width to 80% of parent */
@@ -698,7 +698,6 @@ nav ul li:not(:last-child)::after {
 .join-now-section .join-button:hover {
     background: #f2f2f2;
 }
-/* Form overlay background */
 #membership-form {
     display: none;
     position: fixed;
@@ -706,19 +705,18 @@ nav ul li:not(:last-child)::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6); /* semi-transparent background */
-    display: flex;
+    background-color: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* stack heading and form vertically */
     z-index: 1000;
 }
 #membership-form h2 {
-    color: white; 
-    font-size: 28px;   
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7); 
+    color: white;
+    font-size: 28px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    margin-bottom: 20px; /* space between heading and form */
 }
-
-/* Form container */
 #membership-form form {
     background-color: #fff;
     padding: 30px;
@@ -727,7 +725,6 @@ nav ul li:not(:last-child)::after {
     max-width: 400px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-
 /* Inputs */
 #membership-form input {
     width: 100%;
@@ -736,7 +733,6 @@ nav ul li:not(:last-child)::after {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 /* Buttons */
 #membership-form button {
     background-color: orange;
@@ -747,46 +743,122 @@ nav ul li:not(:last-child)::after {
     cursor: pointer;
     margin-right: 10px;
 }
-
+#confirmation-popup {
+    display: none;               /* hidden by default */
+    position: fixed;
+    top: -200px;                 /* start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+    width: 90%;
+    max-width: 400px;
+    transition: top 0.5s ease;  /* animate sliding down */
+}
+#confirmation-popup.show {
+    display: block;
+    top: 50px;                   /* slide down to visible position */
+}
+.confirmation-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.confirmation-box h2 {
+    color: green;
+    margin-bottom: 10px;
+}
+.confirmation-box button {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
 /* RESPONSIVE: stack vertically on smaller screens */
 @media(max-width: 900px) {
+    /* HERO IMAGE */
     .cards-image-container {
         width: 95%;                 /* smaller width on mobile */
-        overflow: visible;          /* allow text to flow outside container */
+        overflow: visible;          /* allow text to flow */
+        margin: 0 auto;
     }
     .cards-image-container img {
         height: auto;               /* maintain aspect ratio */
     }
     .cards-image-container .hero-text {
-        position: relative;         /* switch from absolute for mobile */
+        position: relative;         /* stack below image */
         top: 0;
         left: 0;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         text-align: center;
         margin-top: 10px;
     }
     .cards-image-container h3 {
-        position: relative;         /* switch from absolute for mobile */
+        position: relative;
         top: 0;
         left: 0;
-        font-size: 0.9rem;
-        max-width: 90%;
+        font-size: 1.2rem;
+        max-width: 100%;
         text-align: center;
-        margin: 5px auto 15px auto; /* space below heading */
-        line-height: 1.2;
+        margin: 5px auto 15px auto;
+        line-height: 1.3;
     }
+
+    /* MEMBER SECTION */
     .member-section {
-        flex-direction: column;
+        flex-direction: column;     /* stack left/right vertically */
         align-items: center;
         padding: 20px;
+        gap: 30px;
     }
     .member-left, .member-right {
-        width: 90%;
-        max-height: none;           /* remove height limit */
+        width: 100%;
+        max-height: none;
     }
     .member-right img {
         width: 100%;
         height: auto;
+    }
+
+    /* JOIN NOW SECTION */
+    .join-now-section {
+        padding: 20px 10px;
+        border-radius: 8px;
+    }
+    .join-now-section h2 {
+        font-size: 24px;
+    }
+    .join-now-section p {
+        font-size: 16px;
+    }
+    .join-now-section .join-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    /* SIGNUP FORM POPUP */
+    #membership-form form {
+        width: 95%;
+        padding: 20px;
+    }
+    #membership-form h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* CONFIRMATION POPUP */
+    #confirmation-popup {
+        width: 90%;
+        max-width: 350px;
+    }
+    .confirmation-box h2 {
+        font-size: 22px;
+    }
+    .confirmation-box p {
+        font-size: 16px;
     }
 }

@@ -61,35 +61,70 @@
     <button class="join-button" onclick="showForm()">JOIN NOW</button>
 </section>
 
-<!-- SIGNUP FORM SECTION -->
 <section id="membership-form" style="display: none;">
-    <h2>Sign Up for &REWARDS</h2>
+    <h2>Sign Up for &REWARDS</h2> <!-- heading outside the form -->
     <form>
         <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" required><br>
 
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required><br>
 
         <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]{8}"><br><br>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{8}"><br>
 
         <label for="birthday">Birthday:</label><br>
-        <input type="date" id="birthday" name="birthday" required><br><br>
+        <input type="date" id="birthday" name="birthday" required><br>
 
         <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required minlength="6"><br><br>
+        <input type="password" id="password" name="password" required minlength="6"><br>
 
         <button type="submit">Sign Up</button>
         <button type="button" onclick="hideForm()">Cancel</button>
     </form>
 </section>
 
-<script>
-function showForm() {
-    document.getElementById('membership-form').style.display = 'block';
-}
-function hideForm() {
-    document.getElementById('membership-form').style.display = 'none';
-}
+<!-- CONFIRMATION POPUP -->
+<section id="confirmation-popup">
+    <div class="confirmation-box">
+        <h2>Thank You!</h2>
+        <p>Congrats! You are now a RE&S member!</p>
+        <button onclick="closeConfirmation()">Close</button>
+    </div>
+</section>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Form submission
+    const form = document.querySelector("#membership-form form");
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();       // prevent page reload
+        hideForm();               // hide signup popup
+
+        const popup = document.getElementById("confirmation-popup");
+        popup.classList.add("show"); // slide down confirmation
+
+        // optional: auto-hide after 3 seconds
+        setTimeout(() => {
+            closeConfirmation();
+        }, 3000);
+    });
+
+    // Show the signup popup
+    window.showForm = function() {
+        document.getElementById('membership-form').style.display = 'flex';
+    }
+
+    // Hide the signup popup
+    window.hideForm = function() {
+        document.getElementById('membership-form').style.display = 'none';
+    }
+
+    // Close the confirmation popup
+    window.closeConfirmation = function() {
+        const popup = document.getElementById("confirmation-popup");
+        popup.classList.remove("show");
+    }
+
+});
 </script>
