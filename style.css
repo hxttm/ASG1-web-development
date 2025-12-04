@@ -531,3 +531,95 @@ nav ul li:not(:last-child)::after {
         width: 80%;
     }
 }
+
+
+/* MEMBER */
+/* MEMBER SECTION: side by side layout */
+.member-section {
+    display: flex;
+    justify-content: center;        /* center horizontally */
+    align-items: stretch;           /* make left and right same height */
+    gap: 40px;                      /* space between left and right */
+    padding: 40px 60px;             /* distance from screen edges */
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* LEFT SIDE: title + perks box */
+.member-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* TITLE */
+.member-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c0392b;
+    margin: 0;
+}
+
+/* SUBTITLE */
+.member-subtitle {
+    font-size: 15px;
+    color: #555;
+}
+
+/* PERKS BOX */
+.member-perks-box {
+    background: white;
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    display: block;
+}
+
+/* PERKS LIST */
+.member-perks-box ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.member-perks-box li {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+/* RIGHT SIDE: image container */
+.member-right {
+    flex: 1;                        /* same width as left */
+    display: flex;
+    justify-content: center;
+    align-items: stretch;            /* match height of left column */
+}
+
+.member-right img {
+    width: 100%;                     /* fill container width */
+    height: 100%;                    /* fill container height */
+    object-fit: contain;             /* keep aspect ratio, no cropping */
+    border-radius: 12px;
+}
+
+/* RESPONSIVE: stack vertically on smaller screens */
+@media(max-width: 900px) {
+    .member-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .member-left, .member-right {
+        width: 90%;
+    }
+
+    .member-right img {
+        width: 100%;
+        height: auto;
+    }
+}
