@@ -420,6 +420,50 @@ nav ul li:not(:last-child)::after {
     border-radius: 6px;
 }
 
+@media (max-width: 900px) {
+    /* Stack left and right columns vertically */
+    .flex-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+    /* Stack content-boxes inside left-column and right-column */
+    #principles-box {
+        order: 1; /* Principles first */
+    }
+    #milestone-box {
+        order: 2; /* Milestones second */
+    }
+    #history-box {
+        order: 3; /* Humbling food last */
+    }
+    .content-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* Adjust text sizes */
+    .about-title,
+    .milestone-title,
+    #principles-box h2 {
+        font-size: 20px;
+    }
+    .about-text p,
+    .principles-list li {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    /* Images scale for mobile */
+    .about-image-container,
+    .milestone-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 /* SEASONAL SPECIALS */
 .seasonal-section {
