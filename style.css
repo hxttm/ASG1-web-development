@@ -533,14 +533,13 @@ nav ul li:not(:last-child)::after {
 }
 
 
-/* MEMBER */
-/* MEMBER SECTION: side by side layout */
+
 .member-section {
     display: flex;
-    justify-content: center;        /* center horizontally */
-    align-items: stretch;           /* make left and right same height */
-    gap: 40px;                      /* space between left and right */
-    padding: 40px 60px;             /* distance from screen edges */
+    justify-content: center;       /* center horizontally */
+    align-items: stretch;          /* make right image fill height */
+    gap: 80px;                     /* space between left and right */
+    padding: 40px 60px;            /* distance from screen edges */
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -550,13 +549,15 @@ nav ul li:not(:last-child)::after {
 .member-left {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     flex: 1;
+    max-height: 450px;  
+    justify-content: center;           /* make left shorter */
 }
 
 /* TITLE */
 .member-title {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bold;
     color: #c0392b;
     margin: 0;
@@ -564,8 +565,9 @@ nav ul li:not(:last-child)::after {
 
 /* SUBTITLE */
 .member-subtitle {
-    font-size: 15px;
+    font-size: 23px;
     color: #555;
+    margin-top: 5px;
 }
 
 /* PERKS BOX */
@@ -576,7 +578,9 @@ nav ul li:not(:last-child)::after {
     padding: 15px 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* PERKS LIST */
@@ -586,8 +590,8 @@ nav ul li:not(:last-child)::after {
 }
 
 .member-perks-box li {
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6;
     margin-bottom: 6px;
 }
 
@@ -596,13 +600,13 @@ nav ul li:not(:last-child)::after {
     flex: 1;                        /* same width as left */
     display: flex;
     justify-content: center;
-    align-items: stretch;            /* match height of left column */
+    align-items: stretch;           /* fill vertical space */
 }
 
 .member-right img {
     width: 100%;                     /* fill container width */
-    height: 100%;                    /* fill container height */
-    object-fit: contain;             /* keep aspect ratio, no cropping */
+    height: 100%;  
+    object-fit: contain;             /* no cropping */
     border-radius: 12px;
 }
 
@@ -616,6 +620,7 @@ nav ul li:not(:last-child)::after {
 
     .member-left, .member-right {
         width: 90%;
+        max-height: none;           /* remove height limit */
     }
 
     .member-right img {
