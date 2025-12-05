@@ -100,12 +100,13 @@
     margin-bottom: 15px;
     color: #555;
 }
-.food-safety-video {
+.food-safety-image {
     width: 100%;
     height: 250px;
     border-radius: 12px;
-    margin-top: 2px;  
+    margin-top: 2px;
     margin-bottom: 20px;
+    object-fit: cover; /* keeps image neat */
 }
 .reserve-text-box {
     width: 100%;
@@ -1000,4 +1001,83 @@ nav ul li:not(:last-child)::after {
 }
 .confirmation-box button:hover {
     background-color: #2ecc71;
+}
+/* HIRING SECTION */
+.hiring-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+/* IMAGE BANNER WITH OVERLAY TEXT */
+.hiring-banner {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.hiring-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Overlay Text */
+.hiring-banner-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    margin: 0;
+}
+.hiring-content {
+    background: #fff;
+    padding: 25px;
+    margin-top: 20px;
+    border: 2px solid #FAD6D2;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.hiring-text {
+    font-size: 18px;
+    color: #555;
+    font-family: Merriweather;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.hiring-list {
+    font-size: 18px;
+    color: #c0392b;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+/* HIRING CONTACT BOX */
+.hiring-contact-box {
+    margin: 25px auto 60px; 
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    background: #fff8f4;
+    border: 2px solid #f5c7b8;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.hiring-contact-box h3 {
+    font-size: 23px;
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+.hiring-contact-box p {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}
+.hiring-phone {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c0392b;
 }
