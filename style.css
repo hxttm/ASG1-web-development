@@ -202,8 +202,46 @@
 #reserve-btn.active {
     background-color: #27ae60;
 }
+/* RESERVATION POPUP */
+#reservation-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.reservation-popup-box {
+    background: white;
+    padding: 25px 35px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+.reservation-popup-box h2 {
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+.reservation-popup-box p {
+    margin-bottom: 15px;
+}
+.reservation-popup-box button {
+    padding: 10px 20px;
+    background: #c0392b;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.reservation-popup-box button:hover {
+    background: #e74c3c;
+}
 
-/* Optional: make the Number of Guests input a bit smaller on mobile */
 @media(max-width: 600px) {
     .reservation-box input,
     .reservation-box button,
@@ -1080,4 +1118,99 @@ nav ul li:not(:last-child)::after {
     font-size: 24px;
     font-weight: bold;
     color: #c0392b;
+}
+
+@media (max-width: 768px) {
+    .member-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+    }
+    .member-left, .member-right {
+        width: 100%;
+        max-height: none;
+    }
+    .member-right img {
+        width: 100%;
+        height: auto;
+    }
+    /* JOIN NOW SECTION */
+    .join-now-section {
+        padding: 20px 10px;
+        border-radius: 8px;
+    }
+    .join-now-section h2 {
+        font-size: 24px;
+    }
+    .join-now-section p {
+        font-size: 16px;
+    }
+    .join-now-section .join-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    /* SIGNUP FORM POPUP */
+    #membership-form form {
+        width: 95%;
+        padding: 20px;
+    }
+    #membership-form h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    /* CONFIRMATION POPUP */
+    #confirmation-popup {
+        width: 90%;
+        max-width: 350px;
+    }
+    .confirmation-box h2 {
+        font-size: 22px;
+    }
+    .confirmation-box p {
+        font-size: 16px;
+    }
+    /* ENQUIRY FORM */
+    .enquiry-box {
+        width: 92%;
+        padding: 20px;
+    }
+    .enquiry-box h2 {
+        font-size: 22px;
+    }
+    /* HIRING SECTION */
+    .hiring-container {
+        width: 92%;
+        margin: 30px auto;
+    }
+    .hiring-banner {
+        height: 180px; /* shorter for small screens */
+    }
+    .hiring-banner-title {
+        font-size: 26px;
+        bottom: 15px;
+        left: 15px;
+    }
+    .hiring-content {
+        padding: 20px;
+        font-size: 16px;
+    }
+    .hiring-text, .hiring-list {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .hiring-contact-box {
+        width: 92%;
+        padding: 18px;
+        margin-bottom: 80px; /* Adds space away from bottom */
+    }
+    .hiring-contact-box h3 {
+        font-size: 20px;
+    }
+    .hiring-contact-box p {
+        font-size: 16px;
+    }
+    .hiring-phone {
+        font-size: 22px;
+    }
 }

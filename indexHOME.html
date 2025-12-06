@@ -109,19 +109,39 @@
             <button type="submit" id="reserve-btn">Reserve</button>
         </form>
     </div>
-
 </div>
 
+<!-- RESERVATION CONFIRMATION POPUP -->
+<section id="reservation-popup" style="display:none;">
+    <div class="confirmation-box">
+        <h2>Reservation Confirmed!</h2>
+        <p>Your reservation has been successfully made.</p>
+        <button onclick="closeReservationPopup()">Close</button>
+    </div>
+</section>
 <script>
-window.onload = function () {
-    const form = document.getElementById("reservation-form");
+// Reservation form
+const reservationForm = document.getElementById("reservation-form");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();  // Stop page refresh
-        alert("Reservation Confirmed! ✔");
-        form.reset();
-    });
-};
+// When reservation form is submitted
+reservationForm.addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent page reload
+    // hide form
+    reservationForm.style.display = "none";
+    // show reservation popup
+    const popup = document.getElementById("reservation-popup");
+    popup.style.display = "flex";
+
+    // reset inputs
+    reservationForm.reset();
+});
+function closeReservationPopup() {
+    const popup = document.getElementById("reservation-popup");
+    popup.style.display = "none";
+
+    // show form again
+    reservationForm.style.display = "flex";
+}
 </script>
 
 </body>
