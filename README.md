@@ -8,7 +8,7 @@ github page link: https://hxttm.github.io/ASG1-web-development/
 ## Overview
 This website show cases RE&S Singapore in a way that is easy and fun to learn and understand. It highlights the company’s profile, milestones, achievements, and what they stand for, all in a clean and modern layout. Everything is set up so users can quickly find what they’re looking for without feeling lost.
 
-Not just looking good, the site works well on any device with smooth nae=vigation and a modern, aesthetic layout. From checking out career opportunities to learning about the company’s story, everything is designed to be straightforward and engaging. Overall, it’s a simple, polished way to get to know RE&S Singapore.
+Not just looking good, the site works well on any device with smooth navigation and a modern, aesthetic layout. From checking out career opportunities to learning about the company’s story, everything is designed to be straightforward and engaging. Overall, it’s a simple, polished way to get to know RE&S Singapore.
 ---
 
 # Design Process
